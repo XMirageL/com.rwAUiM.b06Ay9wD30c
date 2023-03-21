@@ -6,6 +6,7 @@ import android.util.Log
 import androidx.lifecycle.ViewModelProvider
 import com.appsflyer.AppsFlyerConversionListener
 import com.appsflyer.AppsFlyerLib
+import com.hjq.toast.Toaster
 import com.rwAUiM.b06Ay9wD30c.utils.CrashHandler
 
 /**
@@ -24,6 +25,7 @@ open class App : Application() {
         super.onCreate()
         mAppContext = applicationContext
         CrashHandler.init(this)
+        Toaster.init(this)
         val conversionListener: AppsFlyerConversionListener = object : AppsFlyerConversionListener {
             override fun onConversionDataSuccess(conversionData: Map<String, Any>) {
                 for (attrName in conversionData.keys) {

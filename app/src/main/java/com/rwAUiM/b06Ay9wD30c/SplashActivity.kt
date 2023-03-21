@@ -19,7 +19,6 @@ class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         window.navigationBarColor = Color.TRANSPARENT
-        LogEventUtils.statisticalEvent("test", "testValue", "testUsername")
         OkHttpUtils.getInstance().get(
             "http://140.238.157.120/appconfig/api/get_app_config.php?package_name=${BuildConfig.APPLICATION_ID}",
             object : Callback {
@@ -42,6 +41,7 @@ class SplashActivity : AppCompatActivity() {
                     }
                 }
             })
+//        toWeb("file:///android_asset/index.html")
     }
 
     fun toMain() {

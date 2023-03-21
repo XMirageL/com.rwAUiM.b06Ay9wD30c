@@ -4,20 +4,17 @@ import android.os.Bundle
 import android.util.Log
 import com.appsflyer.AppsFlyerLib
 import com.appsflyer.attribution.AppsFlyerRequestListener
+import com.hjq.toast.Toaster
 
 
 object LogEventUtils {
-    fun statisticalEvent(name: String, content: String, username: String) {
-        val bundle = Bundle()
-        bundle.putString("event_value", content)
-        bundle.putString("username", username)
-        val eventValues = HashMap<String, Any>()
-        eventValues["content"] = content
+    fun statisticalEvent(name: String, data: Map<String, Any>) {
         AppsFlyerLib.getInstance().logEvent(
             Utils.app,
-            name, eventValues,
+            name, data,
             object : AppsFlyerRequestListener {
                 override fun onSuccess() {
+                    Toaster.show("Event sent successfully:{$name:$data}")
                     Log.d("statisticalEvent", "Event sent successfully")
                 }
 

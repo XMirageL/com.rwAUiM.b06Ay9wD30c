@@ -164,7 +164,7 @@ public class WebActivity extends AppCompatActivity {
                 .go(url); //WebView载入该url地址的页面并显示。
 
         // mAgentWeb初始化完成后即可注入，第一个参数为js中可直接调用的对象名，第二个三处为步骤1中的JAVA对象，yu可以以是任意名字，js与这里统一就行了
-        mAgentWeb.getJsInterfaceHolder().addJavaObject("yyyy", new AndroidInterface());
+        mAgentWeb.getJsInterfaceHolder().addJavaObject("H5Inject", new AndroidInterface());
 
         mAgentWeb.getWebCreator().getWebView().setOverScrollMode(WebView.OVER_SCROLL_NEVER);
         mAgentWeb.getAgentWebSettings().getWebSettings().setJavaScriptEnabled(true); // 是否开启JS支持
