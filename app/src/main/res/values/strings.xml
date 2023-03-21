@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">IWIN- NỔ HŨ SLOT XANH CHÍN</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_profile">Mine</string>
+    <string name="apps_flyer_dev_key">Gzyt4NHwY7uLWHeZsEWeWZ</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
