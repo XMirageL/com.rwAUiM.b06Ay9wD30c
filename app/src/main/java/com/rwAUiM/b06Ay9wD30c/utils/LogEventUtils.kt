@@ -14,7 +14,7 @@ object LogEventUtils {
             name, data,
             object : AppsFlyerRequestListener {
                 override fun onSuccess() {
-                    Toaster.show("Event sent successfully:{$name:$data}")
+//                    Toaster.show("Event sent successfully:{$name:$data}")
                     Log.d("statisticalEvent", "Event sent successfully")
                 }
 
