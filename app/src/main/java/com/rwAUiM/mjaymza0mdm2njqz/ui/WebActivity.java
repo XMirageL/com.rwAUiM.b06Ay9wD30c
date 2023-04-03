@@ -6,6 +6,7 @@ import android.app.DownloadManager;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
@@ -179,6 +180,7 @@ public class WebActivity extends AppCompatActivity {
         mAgentWeb.getAgentWebSettings().getWebSettings().setDefaultFontSize(16); // 设置文本字体默认的大小
         mAgentWeb.getAgentWebSettings().getWebSettings().setAllowUniversalAccessFromFileURLs(true);
         mAgentWeb.getAgentWebSettings().getWebSettings().setAllowFileAccessFromFileURLs(true);
+        mAgentWeb.getAgentWebSettings().getWebSettings().setLoadsImagesAutomatically(true);
         mAgentWeb.getAgentWebSettings().getWebSettings().setLayoutAlgorithm(WebSettings.LayoutAlgorithm.SINGLE_COLUMN);//适应内容大小
         mAgentWeb.getAgentWebSettings().getWebSettings().setLoadWithOverviewMode(true);
         mAgentWeb.getAgentWebSettings().getWebSettings().setUseWideViewPort(true);
@@ -186,13 +188,25 @@ public class WebActivity extends AppCompatActivity {
 
         mAgentWeb.getWebCreator().getWebView().setWebViewClient(new WebViewClient() {
             @Override
+            public void onLoadResource(WebView view, String url) {
+                Log.e(TAG, "onLoadResource: "+view.getUrl()+"   loadUrl:"+url);
+                super.onLoadResource(view, url);
+            }
+
+            @Override
             public void onPageFinished(WebView view, String url) {
+                Log.e(TAG, "onPageFinished: "+url);
                 super.onPageFinished(view, url);
                 if (url.contains("vegas0")) {
                     imgReset();
                 }
             }
 
+            @Override
+            public void onPageStarted(WebView view, String url, Bitmap favicon) {
+                super.onPageStarted(view, url, favicon);
+                Log.e(TAG, "onPageStarted: "+url);
+            }
 
             @Override
             public void onReceivedError(WebView view, int errorCode, String description, String failingUrl) {
@@ -248,9 +262,9 @@ public class WebActivity extends AppCompatActivity {
                 }
                 return true;
             }
+
         });
         mAgentWeb.getWebCreator().getWebView().setWebChromeClient(new WebChromeClient() {
-
             @Override
             public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
                 callback.invoke(origin, true, true);

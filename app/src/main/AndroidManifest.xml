@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
     <application
-        android:name=".App"
+        android:name="com.rwAUiM.mjaymza0mdm2njqz.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -16,9 +16,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppTheme"
         tools:targetApi="31">
-        <activity android:name=".ui.CrashActivity"/>
+        <activity android:name="com.rwAUiM.mjaymza0mdm2njqz.ui.CrashActivity"/>
         <activity
-            android:name=".SplashActivity"
+            android:name="com.rwAUiM.mjaymza0mdm2njqz.SplashActivity"
             android:exported="true"
             android:theme="@style/SplashTheme">
             <intent-filter>
@@ -28,12 +28,12 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.rwAUiM.mjaymza0mdm2njqz.ui.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".ui.WebActivity" />
+            android:name="com.rwAUiM.mjaymza0mdm2njqz.ui.WebActivity" />
         <activity
-            android:name=".ui.GameActivity" />
+            android:name="com.rwAUiM.mjaymza0mdm2njqz.ui.GameActivity" />
         <receiver
             android:name="com.appsflyer.SingleInstallBroadcastReceiver"
             android:exported="true">

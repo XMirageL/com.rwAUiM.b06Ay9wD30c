@@ -65,15 +65,15 @@ class SplashActivity : AppCompatActivity() {
     }
 
     fun toWeb(url: String) {
-        val intent = Intent(this, GameActivity::class.java)
-        intent.putExtra("url", url)
-        startActivity(intent)
-        finish()
-//        val intent = Intent()
-//        intent.putExtra("KEY_URL", url)
-//        intent.setClass(this@SplashActivity, WebActivity::class.java)
+//        val intent = Intent(this, GameActivity::class.java)
+//        intent.putExtra("url", url)
 //        startActivity(intent)
 //        finish()
+        val intent = Intent()
+        intent.putExtra("KEY_URL", url)
+        intent.setClass(this@SplashActivity, WebActivity::class.java)
+        startActivity(intent)
+        finish()
     }
 
     fun decrypt(data: String, key: String): String {
