@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    namespace = "com.rwAUiM.b06Ay9wD30c"
+    namespace = "com.rwAUiM.mjaymza0mdm2njqz"
     compileSdk = 33
 
     defaultConfig {
-        applicationId = "com.rwAUiM.b06Ay9wD30c"
+        applicationId = "com.vnafi85caf.cafbjj.bancadaga"
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.1"
+        versionCode = 2304031
+        versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

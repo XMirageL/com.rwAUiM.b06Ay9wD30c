@@ -14,6 +14,6 @@ dependencyResolutionManagement {
         maven("https://jitpack.io")
     }
 }
-rootProject.name = "IWIN- NỔ HŨ SLOT XANH CHÍN"
+rootProject.name = "H5Templet"
 include(":app")
  

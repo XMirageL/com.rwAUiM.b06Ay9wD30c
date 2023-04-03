@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.rwAUiM.b06Ay9wD30c",
+  "applicationId": "com.vnafi85caf.cafbjj.bancadaga",
   "variantName": "release",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 1,
-      "versionName": "1.1",
+      "versionCode": 2304031,
+      "versionName": "1.0",
       "outputFile": "app-release.apk"
     }
   ],

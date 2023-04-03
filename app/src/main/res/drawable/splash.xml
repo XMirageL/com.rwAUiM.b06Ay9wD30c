@@ -1,17 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <color android:color="@color/ic_launcher_background" />
+        <color android:color="@color/ic_launcher_bg" />
     </item>
     <item>
         <bitmap
             android:tileMode="clamp"
             android:gravity="top"
             android:src="@drawable/ic_splash_bg" />
-    </item>
-    <item>
-        <bitmap
-            android:gravity="center"
-            android:src="@drawable/ic_splash_fg" />
     </item>
 </layer-list>
